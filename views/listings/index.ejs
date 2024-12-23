@@ -41,7 +41,12 @@
     display: none;
    }
   }
-    
+  @media(max-width:993px){
+    .filt{
+    display: none;
+   }
+  }
+
   
 </style>
 
@@ -94,13 +99,13 @@
         </div>
         <p>BeacheFront</p>
       </div>
-      <div class="filter">
+      <div class="filter filt">
         <div>
           <i class="fa-solid fa-person-swimming"></i>
         </div>
         <p>Amazing pools</p>
       </div>
-      <div class="filter">
+      <div class="filter filt">
         <div>
           <i class="fa-solid fa-hotel"></i>
         </div>
@@ -128,11 +133,13 @@
         </div>
       </div>
     </div>
-
+   
+    <div class="container mt-3">
     <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3 ">
     
       <% for(let listing of allListings) { %>
-      <div class="card col listing-card" >
+        <div class="cols-xl-3 cols-lg-3 cols-md-6 cols-sm-12 mb-4 ">
+         <div class="card col listing-card" >
         <a href="/listings/<%= listing._id%>" class="listing-links">
         
         <img src="<%= listing.image.url %>" class="card-img-top" alt="listing-images"style="height: 20rem;" >
@@ -153,9 +160,11 @@
           </p>
         </div>
         </a>
+        </div>
       </div>
       <% } %>
       </div>
+    </div>
 
     <script>
       let taxSwitch=document.getElementById("flexSwitchCheckDefault");

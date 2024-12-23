@@ -23,8 +23,27 @@
       width: 200px;
     }
   }
- 
+  @media(max-width:770px){
+    .search-inp,.search-btn{
+     display: none;
+    }
+  }
+  @media(max-width:767px){
+    .navbar-collapse{
+      box-shadow: 4px 5px  #fe424d;
+    border-radius: 1rem;
+    height: 10rem;
+    display: inline-block;
+   background-color: #fff;
+    padding-left: 2rem;
+      
+    }
+  }
 
+  .navbar-toggler-icon{
+    background-color: #fff;
+    color: black;
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -33,7 +52,8 @@
     <button class="navbar-toggler" type="button" 
     data-bs-toggle="collapse" 
     data-bs-target="#navbarNavAltMarkup" >
-      <span class="navbar-toggler-icon"></span>
+      <!-- <span class="navbar-toggler-icon "></span> -->
+      <i class="fa-solid fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
@@ -42,8 +62,8 @@
 
       <!-- search bar -->
 
-      <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
+      <div class="navbar-nav ms-auto ">
+        <form class="d-flex search"  role="search">
           <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" >
           <button class="btn search-btn" type="submit" >
             <i class="fa-solid fa-magnifying-glass"></i>Search</button>

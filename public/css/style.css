@@ -46,6 +46,8 @@ body{
   .f-info-socials i{
       font-size: 1.2rem;
       margin-right: 0.7rem;
+      margin-top: 0.7rem;
+
   }
   .f-info{
       text-align: center;
@@ -56,6 +58,9 @@ body{
       justify-content: center;
       align-items:space-evenly;
       gap: 0.2rem;
+  }
+  .f-info-links{
+    padding-bottom: 0.6rem;
   }
   /* cards */
   .listing-card{
